@@ -16,15 +16,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void run() {
                 try {
-                    Thread.sleep(4000);
-                    Intent intent=new Intent(getApplicationContext(),HelloWorld.class);
-                startActivity(intent);
-                    finish();
+                    sleep(4000);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-                
-
+                Intent intent=new Intent(getApplicationContext(),HelloWorld.class);
+                startActivity(intent);
+finish();
             }
         };
         mt.start();
